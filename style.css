@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: [first] 40px [line2] 20px [line3] 2fr [col4-start] 1fr [five] 1fr [end];
+    /* fr mevcut genisligi düsüp kalan genisligi hesaplayip birimlere dagitiyor */
+    grid-template-rows: [first-grid-line] repeat(3, 20px [col-start]) repeat(3, 50px [col-start]);
+    /* grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line]; */
+}
+
+p {
+    margin: 0;
+}
+
+.item-3 {
+    width: 100%;
+    height: 100%;
+    grid-row-start: first-grid-line;
+    grid-column-start: line2;
+}
+
+.item-2 {
+    grid-row-start: first-grid-line 0;
+    grid-column-start: line2;
+}
